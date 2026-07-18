@@ -7,18 +7,11 @@
         {
             Is3D = is3d;
         }
-        private decimal GetPrice3D()
-        {
-            if (Is3D)
-            {
-                Price += 30;
-            }
-            return Price;
-        } 
+        public decimal PriceAfter3D => Is3D ? Price + 30 : Price;
 
         public override string ToString()
         {
-            return $"{base.ToString()},IMAX : {(Is3D ? $"Yes + (30) Price :{GetPrice3D()}" :"No" )}";
+            return $"{base.ToString()},IMAX : {(Is3D ? $"Yes + (30) Price :{PriceAfter3D}" :"No" )}";
         }
     }
 }
