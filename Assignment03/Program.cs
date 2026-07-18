@@ -31,6 +31,21 @@
              */
             #endregion
             #endregion
+            #region Part02
+            Cinema cinema = new Cinema("Cinema");
+            cinema.OpenCinema();
+            Ticket ticket1=new Ticket("Inception",100);
+            cinema.Add(ticket1);
+            StandardTicket ticket2 = new StandardTicket("Avengers",200,"A5");
+            cinema.Add(ticket2);
+            VipTicket ticket3 = new VipTicket("Spiderman",300,true,50);
+            cinema.Add(ticket3);
+            IMAXTicket ticket4 = new IMAXTicket("Batman",350,true);
+            cinema.Add(ticket4);
+            Ticket.GetTotalTickets();
+            cinema.PrintAllTickets();
+            cinema.CloseCinema();
+            #endregion
         }
     }
 }
